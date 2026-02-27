@@ -10,8 +10,7 @@ let x;
 let y;
 let speed = 5;
 let psize = 25;
-let fx;
-let fy;
+let fy = 0;
 
 function setup() {
   createCanvas(400, 400);
@@ -19,7 +18,8 @@ function setup() {
   
   x = width/2;
   y = height/2;
-  fx = random(0, width)
+  let fx = random(0, width);
+  
 }
 
 function draw() {
@@ -27,7 +27,7 @@ function draw() {
   
   drawRec();
   move();
-  something();
+  
 }
 
 function drawRec() {
@@ -36,7 +36,7 @@ function drawRec() {
 }
 
 function move() {
-  if (keyIsDown(68) && x != width-psize) { // go right
+  if (keyIsDown(68) && x !== width-psize) { // go right
     x += speed;
   }
   if (keyIsDown(65) && x > 0) { // go left
@@ -44,10 +44,17 @@ function move() {
   }
 }
 
-function something() {
-  fy = 0
-  if (fy < y) {
-    square(fx, fy, 20);
+function ok() {
+  square(fx, fy, 50);
+  while (fy < height) {
     fy++;
   }
+
+  if (fx === x && fy === y) {
+    
+  }
+}
+
+function b() {
+  
 }
