@@ -4,4 +4,4 @@
 - [some demo](the-folder)
 
 ## Assignments
-- add assignment after
+- [interactive scene](interactive-scene)
