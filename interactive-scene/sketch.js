@@ -10,7 +10,8 @@ let x;
 let y;
 let speed = 5;
 let psize = 25;
-let fy = 0;
+let fx;
+let fy;
 
 function setup() {
   createCanvas(400, 400);
@@ -18,8 +19,7 @@ function setup() {
   
   x = width/2;
   y = height/2;
-  let fx = random(0, width);
-  
+  fx = random(0, width);
 }
 
 function draw() {
@@ -27,7 +27,7 @@ function draw() {
   
   drawRec();
   move();
-  
+  b();
 }
 
 function drawRec() {
@@ -44,17 +44,18 @@ function move() {
   }
 }
 
-function ok() {
-  square(fx, fy, 50);
-  while (fy < height) {
-    fy++;
-  }
-
-  if (fx === x && fy === y) {
-    
-  }
+function b() {
+  fy = bmove();
+  square(fx, fy, 20);
 }
 
-function b() {
+function bmove() {
+  if (fy !== y && fy !== x) {
+    fy++;
+  }
+  return fy;
+}
+
+function th() {
   
 }
