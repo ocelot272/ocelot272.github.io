@@ -6,5 +6,6 @@
 
 ## Assignments
 - [interactive scene](interactive-scene)
+- [Array and Object Notation](array-object)
 
 
