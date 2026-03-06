@@ -58,6 +58,3 @@ function spawnBall(_x, _y) {
   ballArray.push(someBall);
 }
 
-function teleportBall() {
-  
-}
